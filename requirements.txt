@@ -1,0 +1,6 @@
+# Python 3.9 - 3.12 recommended (3.8 works with streamlit 1.40).
+streamlit>=1.40,<2
+requests>=2.31
+python-dotenv>=1.0
+openai>=1.66
+pillow>=10.0

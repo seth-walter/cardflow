@@ -1,0 +1,25 @@
+# Secrets: API keys and eBay tokens. Never commit these.
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+env/
+
+# Your own data: listings, scans, caches, learned card photos.
+# Everything CardFlow writes lives in data/. Only the shared parallel checklist and the
+# starter library of parallel example photos ship with the repo.
+data/*
+!data/parallels.json
+!data/parallel_refs/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
