@@ -16,6 +16,9 @@ from pathlib import Path
 # Never load or overwrite the real saved card list.
 os.environ["SESSION_STATE_PATH"] = os.path.join(tempfile.mkdtemp(), "session_cards.json")
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import offline_env  # noqa: F401,E402  (placeholder keys; must come before settings)
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from PIL import Image
