@@ -10,7 +10,7 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 
 # openai | gemini. Picks the default models below; a model set explicitly in .env wins.
 # Gemini usage is paid from the Google AI Pro plan's monthly Cloud credit.
-VISION_PROVIDER = os.getenv("VISION_PROVIDER", "openai").strip().lower()
+VISION_PROVIDER = (os.getenv("VISION_PROVIDER") or "gemini").strip().lower()
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
 # Optional key from a Google project with billing off. Used only once the paid key runs
 # out of credit (402): rate-limited, and Google may train on free-tier requests.
